@@ -24,4 +24,26 @@ body{
    font-size: 22px;
    font-weight: 600;
    padding: 20px 30px;
+   border-bottom: 1px solid #bfbfbf;
+}
+
+.wrapper form{
+   margin: 35px 30px;
+}
+
+form .db1-field{
+   display: flex;
+   align-items: center;
+   margin-bottom: 25px;
+   justify-content: space-between;
+}
+.db1-field .field{
+   height: 50px;
+   width: calc(100% / 2 -13px);
+}
+
+form .field input,
+form .message textarea{
+   height: 100%;
+   width: 100%;
 }
