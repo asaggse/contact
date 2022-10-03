@@ -10,40 +10,84 @@ body{
    display: flex;
    padding: 0 10px;
    min-height: 100vh;
+   background: #0D6EFD;
    align-items: center;
    justify-content: center;
-   background: #0066ff;
+}
+::selection{
+   color: #ffffff;
+   background: #0D6EFD;
 }
 .wrapper{
-   width: 720px;
+   width: 715px;
    background: #ffffff;
    border-radius: 5px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
-
 .wrapper header{
    font-size: 22px;
    font-weight: 600;
    padding: 20px 30px;
-   border-bottom: 1px solid #bfbfbf;
+   border-bottom: 1px solid #CCCCCC;
 }
-
 .wrapper form{
    margin: 35px 30px;
 }
-
+.wrapper form.disabled{
+   pointer-events: none;
+   opacity: 0.7;
+}
 form .db1-field{
    display: flex;
-   align-items: center;
    margin-bottom: 25px;
    justify-content: space-between;
 }
 .db1-field .field{
    height: 50px;
-   width: calc(100% / 2 -13px);
+   display: flex;
+   position: relative;
+   width: calc(100% / 2 - 13px);
 }
-
+.wrapper form i{
+   position: absolute;
+   top: 50%;
+   left: 18px;
+   color: #CCCCCC;
+   font-size: 17px;
+   pointer-events: none;
+   transform: translateY(-50%);
+}
 form .field input,
 form .message textarea{
    height: 100%;
    width: 100%;
+   outline: none;
+   padding: 0 18px 0 48px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: 1px solid #CCCCCC;
+}
+.field input::placeholder,
+.message textarea::placeholder{
+   color: #CCCCCC;
+}
+.field input:focus,
+.message textarea:focus{
+   padding-left: 47px;
+   border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+   color: #0D6EFD;
+}
+form .message{
+   position: relative;
+}
+form .message i{
+   top: 30px;
+   font-size: 20px;
+}
+form .message textarea{
+   min-height: 120px;
+   padding: 15px 20px 0 48px;
 }
