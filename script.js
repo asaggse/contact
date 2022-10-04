@@ -1,2 +1,7 @@
 const form = document.querySelector("form"),
 statusTxt = form.querySelector(".button-area span");
+
+form.onsubmit = () =>{
+   e.preventDefault();
+   statusTxt.style.display = "block";
+}
