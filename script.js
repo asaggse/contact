@@ -19,5 +19,6 @@ xhr.onload=()=>{
       statusTxt.innerText=response;form.classList.remove("disabled");
    }
 }
-let formData=new FormData(form);xhr.send(formData);
+let formData=new FormData(form);
+xhr.send(formData);
 }
